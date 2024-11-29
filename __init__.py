@@ -585,16 +585,16 @@ from aiohttp import web
 from server import PromptServer
 from pathlib import Path
 
-if hasattr(PromptServer, "instance"):
+# if hasattr(PromptServer, "instance"):
 
     # NOTE: we add an extra static path to avoid comfy mechanism
     # that loads every script in web. 
     # 
     # Again credit to KJNodes and MTB nodes
 
-    PromptServer.instance.app.add_routes(
-        [web.static("/ryanontheinside_web_async", (Path(__file__).parent.absolute() / "ryanontheinside_web_async").as_posix())]
-    )
+    # PromptServer.instance.app.add_routes(
+    #     [web.static("/ryanontheinside_web_async", (Path(__file__).parent.absolute() / "ryanontheinside_web_async").as_posix())]
+    # )
 
 
 
